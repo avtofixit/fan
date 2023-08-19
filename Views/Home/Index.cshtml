@@ -1,0 +1,26 @@
+﻿@model Fan.Models.FanModel
+@{
+    ViewBag.Title = "Fan Page - Fan controls and settings - Government of Nova Scotia";
+}
+
+
+<link rel="stylesheet" media="all" href="~/Content/supplimentary-page-styles.css">
+<link rel="stylesheet" media="all" href="~/Content/saltire.css">
+<link rel="stylesheet" media="all" href="~/Content/buttons.css">
+<link rel="stylesheet" media="all" href="~/Content/phase-banner.css" />
+
+<section class="row">
+    <div class="col-md-12 col-xs-12">
+        <h2>Fan settings</h2>
+
+        Speed - @Model.Speed <br /><br />
+        Direction - @(Model.Direction ? "clockwise" : "counter-clockwise")<br /><br />
+        <p>Use the buttons to change fan speed and direction </p>
+        <a href="/Home/SpeedUp" role="button" draggable="false" class="btn-lg btn-default ns-link-button">
+            Speed Up
+        </a>
+        <a href="/Home/Reverse" role="button" draggable="false" class="btn-lg ns-btn-2nd ns-link-button">
+            Reverse
+        </a>
+    </div>
+</section>
